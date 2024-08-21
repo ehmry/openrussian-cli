@@ -49,6 +49,10 @@ ifneq ($(BASH_COMPLETIONSDIR),)
 	mkdir -p $(DESTDIR)$(BASH_COMPLETIONSDIR)
 	cp openrussian-completion.bash $(DESTDIR)$(BASH_COMPLETIONSDIR)/openrussian
 endif
+ifneq ($(FISH_COMPLETIONSDIR),)
+	mkdir -p $(DESTDIR)$(FISH_COMPLETIONSDIR)
+	cp openrussian-completion.fish $(DESTDIR)$(FISH_COMPLETIONSDIR)/openrussian.fish
+endif
 ifneq ($(ZSH_COMPLETIONSDIR),)
 	mkdir -p $(DESTDIR)$(ZSH_COMPLETIONSDIR)
 	cp openrussian-completion.zsh $(DESTDIR)$(ZSH_COMPLETIONSDIR)/_openrussian
